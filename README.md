@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# Agro Data Analysis with React, Mantine, and Tailwind CSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project visualizes agricultural data of India using React, Mantine, and Tailwind CSS. The application features two tables:
 
-## Available Scripts
+1. "Crop with Maximum Production in that Year" and "Crop with Minimum Production in that Year" by year.
+2. "Average Yield of the Crop between 1950-2020" and "Average Cultivation Area of the Crop between 1950-2020" by crop name.
 
-In the project directory, you can run:
+## Screenshots
 
-### `yarn start`
+### Table 1: Crop Production by Year
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Crop Production by Year](screenshots/table1.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Table 2: Average Yield and Cultivation Area by Crop
 
-### `yarn test`
+![Average Yield and Cultivation Area by Crop](screenshots/table2.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup
 
-### `yarn build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js
+- yarn (Package Manager)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `yarn eject`
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   yarn
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install and configure Tailwind CSS:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   yarn add -D tailwindcss postcss autoprefixer
+   yarn tailwindcss init -p
+   ```
 
-## Learn More
+4. Configure `tailwind.config.js`:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```js
+   // tailwind.config.js
+   module.exports = {
+     content: ["./src/**/*.{js,jsx,ts,tsx}"],
+     theme: {
+       extend: {},
+     },
+     plugins: [],
+   };
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Add Tailwind directives to your CSS file (`src/index.css`):
 
-### Code Splitting
+   ```css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+6. Import the CSS file in your main JavaScript file (`src/index.js`):
 
-### Analyzing the Bundle Size
+   ```js
+   import "./index.css";
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+7. Start the development server:
+   ```bash
+   yarn start
+   ```
 
-### Making a Progressive Web App
+## Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- The first table displays the crop with maximum and minimum production for each year.
+- The second table displays the average yield and average cultivation area for each crop between 1950 and 2020.
+- Use the "Previous" and "Next" buttons to navigate through the data pages.
 
-### Advanced Configuration
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `src/App.js`: Contains the main logic for data processing and rendering the tables.
+- `src/index.js`: Entry point of the application.
+- `src/index.css`: Tailwind CSS configuration.
 
-### Deployment
+## Dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- [React](https://reactjs.org/)
+- [Mantine](https://mantine.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-### `yarn build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License.
