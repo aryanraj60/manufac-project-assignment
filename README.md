@@ -9,11 +9,13 @@ This project visualizes agricultural data of India using React, Mantine, and Tai
 
 ### Table 1: Crop Production by Year
 
-![Crop Production by Year](screenshots/table1.png)
+![Screenshot 2024-06-24 at 11 13 10 AM](https://github.com/aryanraj60/manufac-project-assignment/assets/72094124/bfbcb333-b23c-40fd-9a59-7adc2d2a08c2)
+
 
 ### Table 2: Average Yield and Cultivation Area by Crop
 
-![Average Yield and Cultivation Area by Crop](screenshots/table2.png)
+![Screenshot 2024-06-24 at 11 13 17 AM](https://github.com/aryanraj60/manufac-project-assignment/assets/72094124/3db7ee48-18e8-4c49-85e4-e03d74e5cff6)
+
 
 ## Setup
 
@@ -27,8 +29,9 @@ This project visualizes agricultural data of India using React, Mantine, and Tai
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/aryanraj60/manufac-project-assignment.git
+   
+   cd manufac-project-assignment
    ```
 
 2. Install dependencies:
